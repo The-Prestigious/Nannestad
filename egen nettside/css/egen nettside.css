@@ -1,0 +1,39 @@
+html {
+    background-color: black;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    margin: 50px;
+    border: 50%;
+    padding: 0%; 
+}
+
+p {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    margin: 50px;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    padding: 5%;
+    font-style: -size 50px; 
+}
+
+
+list-style: none;
+position: relative;
+float: auto; /*betyr at elementene skal holde seg til venstre*/
+margin-top: 1%; /*avstand fra toppen av siden til "nav-taggen"*/
+margin-left: auto; /*avstanden fra linjen til venstre mark*/
+margin-right: auto; /*avstanden fra linjen til høyre mark*/
+padding: 1%; /*setter litt luft i boksen*/
+display: block;
+
+
+

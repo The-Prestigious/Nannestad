@@ -1,0 +1,56 @@
+html{
+    background-color: antiquewhite;
+    margin: 5%;
+}
+body{
+    background-color: #a6cedb;
+    color: #04fb35;
+    font-size: 200%;
+    margin: ;
+    border: #4204fb;
+    border-width: 9px;
+    border-style: solid;
+    /*padding-left: 1%; */
+}
+
+section{
+    background-color: #191970;
+    width: 60%;
+    margin-left: 19%;
+    padding-left: 2%;
+}
+
+article{
+
+}
+
+aside{
+
+}
+
+nav{
+    background-color: #191970;
+    padding: 1%;    /*gir luft rundt menyen*/
+    font-size: 110%;
+    font-weight:900 ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul{
+    list-style: none;
+    position: relative;
+    float: left;    /*Betyr at elementene skal hold seg til venstre*/
+    margin-top: 1%; /*avstand fra toppen av siden til "nav-taggen" begynner*/
+    margin-left: auto;  /*avstand fra linjen til venstre marg*/
+    margin-right: auto; /*avstand fra linjen til høyre marg*/
+    padding: 1%; /*setter litt luft i boksen*/
+    display: block;
+}
+
+nav ul li{
+    
+}
+
+/*nav ol{
+    list-style: none;
+}*/

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/1ima (2).css">
+
+        <title>Tor Andreas</title>
+    </head>
+<body class="torclickerbackground1">
+    <h1 style="color: white; font-size: 100px;" class="h1rainbow1" style="font-size: 80px;">Tor Clicker™</h1>
+    <div class="topnav">
+        <a class="active" href="/html/my_page.html">Hjem</a>
+
+        <a href="/html/my_page_interesser.html">Om</a>
+
+        <a class="contact1" href="/html/contactme.html">Kontakt</a>
+        <div class="search-container">
+          <form action="/html/mefr2.html">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    <nav>
+        <ul>
+            
+            <li><a href="/html/my_page_skole.html">Skole</a>
+                <ul>
+                    <li><a href="/html/skole/Programmering.html">Programmering</a>
+                        <ul>
+                            <li><a href="/html/skole/programmering/Html.html">HTML</a></li>
+                            <li><a href="/html/skole/programmering/Css.html">CSS</a>
+                               
+                            </li>
+                            <li><a href="/html/skole/programmering/Javascript.html">JavaScript</a>
+                            
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/html/skole/Konseptutvikling.html">Konseptutvikling</a></li>
+                    <li><a href="/html/skole/Historiefortelling.html">Historiefortelling</a></li>
+                    <li><a href="/html/skole/Teknologiforståelse.html">Teknologiforståelse</a></li>
+                    <li><a href="/html/skole/YFF.html">YFF</a></li>
+                    <li><a href="/html/skole/Englesk.html">Engelsk</a></li>
+                    <li><a href="/html/skole/Naturfag.html">Naturfag</a></li>
+                    <li><a href="/html/skole/Mattematikk.html">Matematikk</a></li>
+                    <li><li><a href="/html/skole/Gym.html">Gym</a></li></li>
+                </ul>
+            </li>
+            <li><a href="/html/my_page_interesser.html">Interesser</a>
+                <ul>
+                    <li><a href="">Spill</a>
+                        <ul>
+                            <li><a href="/html/Interesser/spill/Valorant.html">Valorant</a></li>
+                            <li><a href="/html/Interesser/spill/GeometryDash.html">Geomtry Dash</a></li>
+                            <li><a href="/html/Interesser/spill/Roblox.html">Roblox</a></li>
+                            <li><a href="/html/Interesser/spill/R6.html">R6</a></li>
+                            <li><a href="/html/Interesser/spill/Vr.html">VR</a></li>
+
+                        </ul>
+                        <li><a class="meg11" href="/html/mefr.html">Meg</a>
+
+                         </li>
+                    </li>
+                </ul>
+               
+            </li>
+
+            <li><a href="/html/my_page_jobb.html">Jobb</a>
+                <ul>
+                    <li><a href="/html/Jobb/Koding.html">Koding</a></li>
+                    <li><a href="/html/Jobb/Design.html">Design</a></li>
+                    <li><a href="/html/Jobb/Filming.html">Filming</a></li>
+                </ul>
+            </li>
+
+            <li><a class="tilbake1" href="/html/my_page.html">gå tilbake</a></li>
+
+            <li>
+                <a href="/html\skole\Naturfag_English.html" class="english_button1">English</a>
+            </li>
+        </ul>
+
+    </nav>
+
+<section class="all-browsers">
+  <h1 class="om-meg" style="font-size: 40px;">Tor Clicker™</h1>
+  <section class="browser">
+
+
+    <p style="font-size: 18px;">
+        <div id="game-container">
+            <p id="score">Score: <span id="score-value">0</span></p>
+            <button class="torfacebutton1" id="click-btn">Click Me!</button>
+            <button class="torfacebutton3" id="upgrade-click-btn">Upgrade Click (Cost: <span id="click-upgrade-cost">5</span>)</button>
+            <button class="torfacebutton2" id="upgrade-auto-btn">Upgrade Auto Click (Cost: <span id="auto-upgrade-cost">10</span>)</button>
+            <p id="auto-click">Auto Click: <span id="auto-click-value">0</span></p>
+        </div>
+        <script src="script.js"></script>
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Game variables
+    let score = 0;
+    let clickValue = 1;
+    let autoClickValue = 0;
+    let autoClickCost = 10;
+    let autoClickInterval;
+    let clickUpgradeCost = 5;
+    let autoUpgradeCost = 10;
+
+    // DOM elements
+    const scoreElement = document.getElementById("score-value");
+    const clickButton = document.getElementById("click-btn");
+    const upgradeClickButton = document.getElementById("upgrade-click-btn");
+    const upgradeAutoButton = document.getElementById("upgrade-auto-btn");
+    const clickUpgradeCostElement = document.getElementById("click-upgrade-cost");
+    const autoUpgradeCostElement = document.getElementById("auto-upgrade-cost");
+    const autoClickValueElement = document.getElementById("auto-click-value");
+
+    // Click button event listener
+    clickButton.addEventListener("click", function () {
+        score += clickValue;
+        updateScore();
+    });
+
+    // Upgrade click button event listener
+    upgradeClickButton.addEventListener("click", function () {
+        if (score >= clickUpgradeCost) {
+            score -= clickUpgradeCost;
+            clickValue++;
+            clickUpgradeCost *= 2;
+            updateScore();
+            updateClickUpgradeCost();
+        }
+    });
+
+    // Upgrade auto click button event listener
+    upgradeAutoButton.addEventListener("click", function () {
+        if (score >= autoUpgradeCost) {
+            score -= autoUpgradeCost;
+            autoClickValue++;
+            autoUpgradeCost *= 2;
+            updateScore();
+            updateAutoUpgradeCost();
+            startAutoClick();
+        }
+    });
+
+    // Update the score on the page
+    function updateScore() {
+        scoreElement.textContent = score;
+        autoClickValueElement.textContent = autoClickValue;
+    }
+
+    // Update the click upgrade cost on the page
+    function updateClickUpgradeCost() {
+        clickUpgradeCostElement.textContent = clickUpgradeCost;
+    }
+
+    // Update the auto upgrade cost on the page
+    function updateAutoUpgradeCost() {
+        autoUpgradeCostElement.textContent = autoUpgradeCost;
+    }
+
+    // Start auto click interval
+    function startAutoClick() {
+        if (!autoClickInterval) {
+            autoClickInterval = setInterval(function () {
+                score += clickValue * autoClickValue; // Click with the product of click value and auto-click value
+                updateScore();
+            }, 1000);
+        }
+    }
+});
+        </script>
+      </p>
+</section>
+</section       >
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

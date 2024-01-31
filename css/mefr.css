@@ -1,0 +1,221 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0)
+	
+    
+
+}
+
+
+h1 {
+	font-style: italic;
+	font-size: 170%;
+	text-align: center; 
+	margin-top: 5%;
+	border-bottom: 4px double rgb(255, 255, 255);
+	
+}
+
+
+nav{
+	padding: 0px;			/*gir "luft" rundt menyen*/
+	font-size: 130%; 		/*bestemmer skriftstørrelsen i menyen*/
+	font-weight:900;		/*bestemmer tykkelsen på skriften*/
+	font-family:"Arial,sans-serif", "Helvetica Neue, Helvetica";
+	float: 0;
+	justify-content: space-between;
+
+
+    
+}
+
+nav ul, nav ul ul {
+	justify-content: space-between;
+}
+
+nav ul {
+	list-style: none;
+	position: relative;		
+	float: left;				/*betyr at elementene i nav skal holde seg til venstre*/
+	border: 5px  rgb(255, 255, 255);	    /*setter en linje rundt hele menyen */
+	width: 70%;                 /*bestemmer bredden på nav*/
+    margin-left: 21%;
+	margin-right: 50%;
+	justify-content: space-between;
+}
+
+nav ul a{
+	display: block;	
+	margin-block: 0;		/*bestemmer at boksene skal viser som block*/
+	color:#ff0000;			/*bestemmer fargen på skriften inne i boksene*/
+	text-decoration: none;	/*Tar bort understreking under ordene*/
+	line-height: 150%;		/*bestemmer høyden på hovedmenyboksene*/
+	text-align: center;		/*får teksteni boksene til å bli sentrert*/
+	width: 135px;			/*bestemmer widden på hovedmenyboksene*/
+	padding: 4%; 
+	box-shadow: 2px 3px rgb(0, 0, 0);
+	
+	
+	/*-moz-box-shadow:    2px 2px 3px 5px gray;*/
+	/* -webkit-box-shadow: 2px 2px 3px 5px gray;*/
+	/* box-shadow:         2px 2px 3px 5px gray;*/
+}
+
+nav ul li{
+	display: block;
+	position: relative;	/*Denne gjør at undermenyene kommer rett under der menyen er*/
+	float: left;			/*Denne gir en vannrett meny */
+	margin: 1%;			/*bestemmer mellomrom mellom boxene*/
+	border: 0;
+	justify-content: space-between;
+	
+
+	
+ }
+
+nav ul li a{
+	background: #000; /*Denne gir de svarte boksene*/
+	
+	border-radius: 15px; /*fører til avrundede hjørner på alle boksene og undermenyene*/
+	
+
+	/*padding: 5px 100px 5px 10px;*/
+}	
+
+nav ul ul{
+	display:none;
+	position:absolute;	/*Denne fører til at undermenyen kommer rett under*/
+	
+	left:0;
+	padding:0;
+	
+}	/*Denne holder orden på menylinjen og at undermenuer holder seg skjult*/
+
+nav ul ul li{
+	/*float:none;*/
+	width:100%;			/*Denne setter avstanden mellom boksenen i undermenyen*/
+}	
+
+nav ul ul a{
+	line-height:120%;   /*setter høyden på boksene i undermenyene*/
+	padding: 4%;		/*gir "luft" rundt teksten i hver enkelt boks på hvoedmenyen, oppe og nede så høyre og venstre*/
+	margin: 2%;        /*Setter avstand mellom boksene i undermenyene*/
+	width: 120%;			/*bestemmer widden på boksene i undermenyene*/
+	
+}	/*Denne får teksten til å komme rett under, istedenfor å få stort linjeskift (linjemllomrom)*/
+
+nav ul ul ul{
+	top:0%;          /*Denne får undermenyen til å komme rett ved siden, ikke nedenfor*/
+	left:10%;		/*Denne gjør at undermenyen vises sidelengs og ikke rett under*/
+   
+    margin-left: 120%;
+  
+}	
+
+nav ul li:hover > ul{
+	display:block;		/*Denne får undermenyene til å vises*/
+	width: 310%;		/*Denne gir størrelsen widden undermenyene fra nivå 2 og utover*/
+    
+}
+
+nav ul li a:hover{
+	background: #f00;       /*Denne får farge på udnermenyene */ 
+    transition: 0.3s;
+	font-size: 120%;
+}
+
+.me1 {
+	float: right;
+	align-items: center;
+	
+
+}
+
+.om-meg {
+	border-style: none;
+	text-align: left;
+}
+
+.all-browsers {
+	margin: 0;
+	padding: 5px;
+	background-color: lightgray;
+  }
+  
+  .all-browsers > h1, .browser {
+	margin: 10px;
+	padding: 5px;
+  }
+  
+  .browser {
+	background: white;
+  }
+  
+  .browser > h2, p {
+	margin: 4px;
+	font-size: 90%;
+  }
+
+  .tilbake1 {
+	float: left;
+  }
+
+  .english_button1 {
+	margin-left: 100%;
+  }
+
+  .button2:active {
+	background-color: red;
+  }
+
+  .button2 {
+	background-color: rgb(0, 0, 0);
+	opacity: 100%;
+	color: white;
+  }
+  div::first-letter {
+	text-transform: capitalize;
+  }
+
+  div:hover::first-letter {
+	color: blue;
+  }
+  div:active::first-letter {
+	color: rgb(0, 255, 26);
+  }
+
+  .img1:hover {
+	opacity: 50%;
+	transition: 1s;
+	rotate: 240;
+  }
+
+
+
+  .mefr2 {
+    transition-delay: 5s;
+    font-size: 200px;
+    color: red;
+    
+  }
+
+.mefr3 {
+	width: 1500px;
+	height: 500px;
+	background: red;
+	position: relative;
+    transition-delay: 2s;
+	animation: mefr3 1s none;
+}
+
+@keyframes mefr3 {
+    0%	{background: red; 	left: 0px; width: 0px; height:0px ;rotate: 0deg;}
+
+    90%	{background: red; 	left: 0px; width: 0px; height:0px ;rotate: 0deg;}
+
+	100% {background: yellow; left: 0px; width: 900px; height:500px ; top: ;	rotate: 3600deg;}
+
+    
+
+
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Bolske verdier</h2>
+    <p>
+        En boolsk verdi representerer sannhet (true) eller falskhet (false) i programmering. Den brukes i beslutningsstrukturer for å kontrollere kodeutførelse basert på om en betingelse er oppfylt eller ikke.
+    </p>
+    <br></br>
+    <p>vis verdien til en Boolian ( 999 > 3 )</p>
+    <button onclick="boolFunction()">Try IT</button>
+    <p id="bool"></p>
+
+<script>
+    function boolFunction() {
+        document.getElementById("bool").innerHTML = Boolean (999 > 3)
+    }
+</script>
+<p>Vis Boolean verdi av undefined</p>
+<button onclick="bUndegined()">Try it</button>
+<p id="und"></p>
+<script>
+    function bUndefined () {
+        var x ;
+        document.getElementById("und").innerHTML = Boolean (x);
+    }
+</script>
+
+<img id="myImage" src="/pictures/GAMER.jpg" alt="width: 100px ;">
+<button onclick="document.getElementById('myImage').src='/pictures/me fr.jpg' "></button>
+</body>
+</html>

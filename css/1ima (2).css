@@ -1,0 +1,452 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
+
+}
+
+
+h1 {
+	font-style: italic;
+	font-size: 170%;
+	text-align: center; 
+	margin-top: 5%;
+	
+}
+
+
+nav{
+	padding: 0px;			/*gir "luft" rundt menyen*/
+	font-size: 130%; 		/*bestemmer skriftstørrelsen i menyen*/
+	font-weight:900;		/*bestemmer tykkelsen på skriften*/
+	font-family:"Arial,sans-serif", "Helvetica Neue, Helvetica";
+	float: 0;
+	justify-content: space-between;
+
+}
+
+nav ul, nav ul ul {
+	justify-content: space-between;
+}
+
+nav ul{
+	list-style: none;
+	position: relative;		
+	float: left;				/*betyr at elementene i nav skal holde seg til venstre*/
+	border: 5px  rgb(0, 0, 0);	    /*setter en linje rundt hele menyen */
+	width: 70%;                 /*bestemmer bredden på nav*/
+    margin-left: 21%;
+	margin-right: 50%;
+	justify-content: space-between;
+}
+
+nav ul a{
+	display: block;	
+	margin-block: 0;		/*bestemmer at boksene skal viser som block*/
+	color:#ffffff;			/*bestemmer fargen på skriften inne i boksene*/
+	text-decoration: none;	/*Tar bort understreking under ordene*/
+	line-height: 150%;		/*bestemmer høyden på hovedmenyboksene*/
+	text-align: center;		/*får teksteni boksene til å bli sentrert*/
+	width: 135px;			/*bestemmer widden på hovedmenyboksene*/
+	padding: 4%; 
+	box-shadow: 2px 3px grey;
+	
+	
+	/*-moz-box-shadow:    2px 2px 3px 5px gray;*/
+	/* -webkit-box-shadow: 2px 2px 3px 5px gray;*/
+	/* box-shadow:         2px 2px 3px 5px gray;*/
+}
+
+nav ul li{
+	display: block;
+	position: relative;	/*Denne gjør at undermenyene kommer rett under der menyen er*/
+	float: left;			/*Denne gir en vannrett meny */
+	margin: 1%;			/*bestemmer mellomrom mellom boxene*/
+	border: 0;
+	justify-content: space-between;
+ }
+
+nav ul li a{
+	background: #000000; /*Denne gir de svarte boksene*/
+	
+	border-radius: 15px; /*fører til avrundede hjørner på alle boksene og undermenyene*/
+	
+
+	/*padding: 5px 100px 5px 10px;*/
+}	
+
+nav ul ul{
+	display:none;
+	position:absolute;	/*Denne fører til at undermenyen kommer rett under*/
+	
+	left:0;
+	padding:0;
+	
+}	/*Denne holder orden på menylinjen og at undermenuer holder seg skjult*/
+
+nav ul ul li{
+	/*float:none;*/
+	width:100%;			/*Denne setter avstanden mellom boksenen i undermenyen*/
+}	
+
+nav ul ul a{
+	line-height:120%;   /*setter høyden på boksene i undermenyene*/
+	padding: 4%;		/*gir "luft" rundt teksten i hver enkelt boks på hvoedmenyen, oppe og nede så høyre og venstre*/
+	margin: 2%;        /*Setter avstand mellom boksene i undermenyene*/
+	width: 120%;			/*bestemmer widden på boksene i undermenyene*/
+	
+}	/*Denne får teksten til å komme rett under, istedenfor å få stort linjeskift (linjemllomrom)*/
+
+nav ul ul ul{
+	top:0%;          /*Denne får undermenyen til å komme rett ved siden, ikke nedenfor*/
+	left:10%;		/*Denne gjør at undermenyen vises sidelengs og ikke rett under*/
+   
+    margin-left: 120%;
+  
+}	
+
+nav ul li:hover > ul{
+	display:block;		/*Denne får undermenyene til å vises*/
+	width: 110%;		/*Denne gir størrelsen widden undermenyene fra nivå 2 og utover*/
+    
+}
+
+
+.me1 {
+	float: right;
+	align-items: center;
+	
+
+}
+
+.om-meg {
+	border-style: none;
+	text-align: left;
+}
+
+.all-browsers {
+	margin: 0;
+	padding: 5px;
+	background-color: lightgray;
+  }
+  
+  .all-browsers > h1, .browser {
+	margin: 10px;
+	padding: 5px;
+  }
+  
+  .browser {
+	background: white;
+  }
+  
+  .browser > h2, p {
+	margin: 4px;
+	font-size: 90%;
+  }
+
+  .tilbake1 {
+	float: left;
+  }
+
+  .english_button1 {
+	margin-left: 100%;
+  }
+
+  .button2:active {
+	background-color: red;
+  }
+
+  .button2 {
+	background-color: rgb(0, 0, 0);
+	opacity: 100%;
+	color: white;
+  }
+  div::first-letter {
+	text-transform: capitalize;
+  }
+
+  div:hover::first-letter {
+	color: blue;
+  }
+  div:active::first-letter {
+	color: rgb(0, 255, 26);
+  }
+
+  .img1:hover {
+	opacity: 50%;
+	transition: 1s;
+	rotate: 240;
+  }
+
+  .bigtext1 {
+	font-weight: 700;
+  }
+
+  form {
+	background-color: lightgray;
+	width: 20%;
+	width: relative;
+	text-align: left;
+  }
+  input {
+	background-color: rgb(255, 255, 255);
+  }
+  select {
+	background-color: rgb(255, 255, 255);
+  }
+
+.picanimate1 {
+	width: 300px;
+	height: 200px;
+	background: red;
+	position: relative;
+	animation: picanimate1 4s infinite;
+}
+
+
+@keyframes picanimate1 {
+   	0%	{background: red; 	left: 0px;  	top: ;		rotate: 0deg;}
+	40% {background: yellow; 	left: 0px;	top: ;		rotate: 20deg;}
+	60%  {background: blue; 	left: 600px; 	top: ;		rotate: 0deg;}
+	75%  {background: green; 	left: 600px; 	top: ;		rotate: 0deg;}
+	100%     {background: red; left: 0px;	top: ; 		rotate: -360deg;}
+
+}
+
+.picanimate2 {
+	width: 300px;
+	height: 150px;
+	background: red;
+	position: relative;
+	animation: picanimate2 10s infinite;
+	
+}
+
+
+@keyframes picanimate2 {
+
+	0%	{background: red; 		left: 0px; width: 50px; height:200px ;	top: 0px;		rotate: 0deg;}
+	40% {background: yellow; 	left: 0px; width: 200px;	height:50px ; top: 0px;		rotate: 360deg;}
+	60%  {background: blue; 	left: 600px; width: 50px; height:200px ; 	top: 0px;		rotate: 0deg;}
+	75%  {background: green; 	left: 600px; width:200px ; height:50px ;	top: 0px;		rotate: 0deg;}
+	90%     {background: red; left: 0px; width: 50px; height:200px ; top: 0px; 		rotate: -360deg;}
+	100%	{background: red; 		left: 0px; width:50px ; height:200px ;	top: 0px;		rotate: 0deg;}
+
+}
+
+.picanimatejobb1 {
+	width: 300px;
+	height: 150px;
+	background: red;
+	position: relative;
+	animation: picanimatejobb1 2s infinite;
+	
+}
+
+
+@keyframes picanimatejobb1 {
+
+}
+
+____________________
+
+.topnav {
+	overflow: hidden;
+	background-color: #e9e9e9;
+  }
+  
+  .topnav a {
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  .topnav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
+  
+  .topnav a.active {
+	background-color: #2196F3;
+	color: white;
+  }
+  
+  .topnav .search-container {
+	float: right;
+  }
+  
+  .topnav input[type=text] {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
+  }
+  
+  .topnav .search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #ddd;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+	background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+	.topnav .search-container {
+	  float: none;
+	}
+	.topnav a, .topnav input[type=text], .topnav .search-container button {
+	  float: none;
+	  display: block;
+	  text-align: left;
+	  width: 100%;
+	  margin: 0;
+	  padding: 14px;
+	}
+	.topnav input[type=text] {
+	  border: 1px solid #ccc;  
+	}
+  }
+
+  ________________
+
+
+.contact1:hover {
+	display: block;
+	width: 50%;
+}
+
+.meg11 {
+	color: red;
+}
+
+.h1rainbow1 {
+	transition: ease-in-out 0.5s ;
+}
+
+.h1rainbow1:hover {
+
+	color: white;
+	text-align: center;
+	text-shadow: -4px 4px #ff2d4c,
+				 -8px 8px #ff5a91,
+				 -12px 12px #7e57c2,
+				 -16px 16px #2196f3,
+				 -20px 20px #26c6da,
+				 -24px 24px #43a047,
+				 -28px 28px #eeff41,
+				 -32px 32px #f9a825,
+				 -36px 36px #ff5722;
+				 
+				 
+}
+
+nav ul li a:hover{
+
+	background: linear-gradient( -45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);      /*Denne får farge på udnermenyene */ 
+
+}
+
+nav ul li ul li a:hover {
+
+	transition: 0.3s;
+	font-size: 110%;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#score {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+#game-container {
+    text-align: center;
+}
+
+
+
+#auto-click {
+    margin-top: 20px;
+}
+
+.torfacebutton1 {
+		background-image: url('/pictures/me fr.jpg'); 
+		background-size: 120px 40px;
+		color: black;
+
+}
+
+.torfacebutton2 {
+	background-image: url('/pictures/me fr.jpg'); 
+	background-size: 280px 40px;
+	color: black;
+
+}
+
+.torfacebutton3 {
+	background-image: url('/pictures/me fr.jpg'); 
+	background-size: 250px 40px;
+	color: black;
+
+}
+
+.torclickerbackground1 {
+	background-image: url(/pictures/me\ fr.jpg);
+}
+
+.jobbimg1 {
+
+position: relative;
+animation: jobbimg1 0.2s infinite;
+z-index: -1;
+
+
+}
+
+@keyframes jobbimg1 {
+
+	0% {left: 0px; top: 200px ; rotate: 0deg ;}
+	50% {left: 600px; top: 200px ; rotate: 999999999999999deg;}
+	100% {left: 0px; top: 200px ; rotate: 0deg;}
+}
+

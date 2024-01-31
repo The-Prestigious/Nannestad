@@ -1,0 +1,102 @@
+html{
+    background-color: antiquewhite;
+    margin: 5%;
+}
+body{
+    background-color: #a6cedb;
+    color: #04fb35;
+    font-size: 200%;
+    margin: ;
+    border: #4204fb;
+    border-width: 9px;
+    border-style: solid;
+    /*padding-left: 1%; */
+}
+
+section{
+    background-color: #191970;
+    width: 60%;
+    margin-left: 19%;
+    padding-left: 2%;
+}
+
+article{
+
+}
+
+aside{
+
+}
+
+nav{
+    background-color: #191970;
+    padding: 1%;    /*gir luft rundt menyen*/
+    font-size: 110%;
+    font-weight:900 ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul{
+    list-style: none;
+    position: relative;
+    float: left;    /*Betyr at elementene skal hold seg til venstre*/
+    border: 3px solid;
+    width: 80%;/*bredden på nav*/
+    margin-top: 1%; /*avstand fra toppen av siden til "nav-taggen" begynner*/
+    margin-left: 25%;  /*avstand fra linjen til venstre marg*/
+    margin-right: auto; /*avstand fra linjen til høyre marg*/
+    padding: 1%; /*setter litt luft i boksen*/
+    display: block;
+}
+
+nav ul a {
+    text-decoration: none; /*tar bort strekene*/
+    line-height: 150%;
+    text-align: center;
+    width: 135px;
+    padding: 4%;
+}
+
+nav ul li{
+    display: block;
+    position: absolute; /*gjør at undermenyene kommer under menyen*/
+    float: left;
+    margin: 1%;
+    border: 0;
+}
+
+nav ul li a {
+    background: #000;
+    border-radius: 15px;
+    transition: ;
+}
+nav ul ul {
+    display: block;
+    position: ; /*denne fører til at undermenyen kommer rett under*/
+    left: 0;
+    padding: 0;
+}
+nav ul ul li {
+    width: 100%;
+}
+nav ul ul a {
+    line-height: 120%;
+    padding: 4%;
+    margin: 2%;
+    width: 120%;
+}
+nav ul ul ul {
+    top: 0;
+    margin-left: 120%;
+}
+nav ul li:hover > ul {
+    display: block;
+    width: 110%;
+}
+nav ul li a {
+    background-color: red;
+    height: 40 px;
+}
+/*nav ol{
+    list-style: none;
+}*/
